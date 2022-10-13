@@ -28,7 +28,14 @@ export const heartCounter = () => {
 
 // 초기값
 const initialState = {
-  comments: [{ id: "2022.10.12 오후 7:16:01", name: "홍길동", word: "화이팅" }],
+  comments: [
+    {
+      id: "id1",
+      date: "2022.10.12 오후 7:16:01",
+      name: "홍길동",
+      word: "화이팅",
+    },
+  ],
   clicks: 0,
 };
 const date =
@@ -54,7 +61,8 @@ const myChanger = (state = initialState, action) => {
         comments: [
           ...state.comments,
           {
-            id: date,
+            id: action.comInput.id,
+            date: date,
             name: action.comInput.name,
             word: action.comInput.word,
           },

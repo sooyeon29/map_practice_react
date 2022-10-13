@@ -1,11 +1,10 @@
 import React from "react";
-import Likes from "./pages/likes";
-import Map from "./redux/modules/kakaomap";
+import Router from "./shared/Router";
 
 export default function App() {
   return (
     <>
-      <Likes />
+      <Router />
     </>
   );
 }
